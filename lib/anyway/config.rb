@@ -92,7 +92,7 @@ module Anyway # :nodoc:
 
         unless (reserved_names = (new_keys & RESERVED_NAMES)).empty?
           raise ArgumentError, "Can not use the following reserved names as config attrubutes: " \
-            "#{reserved_names.sort.map(&:to_s).join(", ")}"
+            "#{reserved_names.sort.join(", ")}"
         end
 
         config_attributes.push(*new_keys)
