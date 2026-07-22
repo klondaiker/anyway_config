@@ -37,7 +37,6 @@ module Anyway # :nodoc:
 
   # Configure default loaders
   loaders.append :yml, Loaders::YAML
-  loaders.append :env, Loaders::Env
 
   # Configure optional loaders
   if ENV["ANYWAY_CONFIG_DISABLE_EJSON"] != "true" && Utils.which("ejson")
@@ -46,6 +45,9 @@ module Anyway # :nodoc:
   if ENV["ANYWAY_CONFIG_DISABLE_DOPPLER"] != "true" && ENV.key?("DOPPLER_TOKEN")
     loaders.append :doppler, Loaders::Doppler
   end
+
+  # ENV must go last to take higher precedence
+  loaders.append :env, Loaders::Env
 end
 
 if defined?(::Rails::VERSION)

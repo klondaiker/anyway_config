@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+unless ARGV.include?("decrypt")
+  warn "Unknown command: #{ARGV.join}"
+  exit(1)
+end
+
+puts File.read(ARGV[1])

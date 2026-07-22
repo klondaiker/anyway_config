@@ -2,7 +2,10 @@
 
 ## master
 
+- Fix default loaders order to keep ENV the last one (=higher precendence). ([@palkan][])
+
 - Guard against a missing `PATH` environment variable in `Anyway::Utils.which`. ([@SAY-5][])
+
 - Do not require optional loader dependencies to speed up loading. ([@ardecvz][])
 
 ## 2.8.0 (2025-06-24)
