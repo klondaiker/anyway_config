@@ -2,7 +2,7 @@
 
 ## master
 
-- Fix default loaders order to keep ENV the last one (=higher precendence). ([@palkan][])
+- Fix default loaders order to keep ENV the last one (=higher precedence). ([@palkan][])
 
 - Guard against a missing `PATH` environment variable in `Anyway::Utils.which`. ([@SAY-5][])
 
