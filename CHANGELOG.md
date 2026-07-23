@@ -2,13 +2,15 @@
 
 ## master
 
+## 2.8.1 (2026-07-22)
+
 - Fix default loaders order to keep ENV the last one (=higher precedence). ([@palkan][])
 
 - Guard against a missing `PATH` environment variable in `Anyway::Utils.which`. ([@SAY-5][])
 
 - Do not require optional loader dependencies to speed up loading. ([@ardecvz][])
 
-## 2.8.0 (2025-06-24)
+## 2.8.0 (2026-06-24)
 
 - Add `configuration_sources` option to config classes to specify which data sources to use. ([@palkan][])
 
